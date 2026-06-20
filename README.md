@@ -1,11 +1,13 @@
-# InstantProfiler — Houdini Shelf Tool
+# InstantProfiler — Houdini Cook-Time Profiler
 
-A lightweight shelf tool for Houdini that paints SOP/OBJ/DOP/ROP nodes with a color gradient based on their cook time, helping you quickly spot performance bottlenecks inside a network.
+A lightweight tool for Houdini that paints SOP/OBJ/DOP/ROP nodes with a color gradient based on their cook time, helping you quickly spot performance bottlenecks inside a network.
 
 ![Houdini](https://img.shields.io/badge/Houdini-21.0%2B-orange)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 
 Repo: [github.com/Electricavisuals/InstantProfiler](https://github.com/Electricavisuals/InstantProfiler)
+
+🎥 [Watch the tutorial on YouTube](https://www.youtube.com/watch?v=e1Dvn-Shauk)
 
 ## What it does
 
@@ -18,11 +20,11 @@ Repo: [github.com/Electricavisuals/InstantProfiler](https://github.com/Electrica
 
 ## Install
 
-1. Copy `toolbar/instant_profiler.shelf` to your Houdini toolbar folder:
+1. Copy `src/InstantProfiler.py` to your Houdini scripts folder:
    ```
-   $HOUDINI_USER_PREF_DIR/toolbar/
+   $HOUDINI_USER_PREF_DIR/scripts/
    ```
-   (on Windows, typically `C:/Users/<you>/Documents/houdini21.0/toolbar/`)
+   (on Windows, typically `C:/Users/<you>/Documents/houdini21.0/scripts/`)
 
 2. Copy the icon to:
    ```
@@ -30,10 +32,15 @@ Repo: [github.com/Electricavisuals/InstantProfiler](https://github.com/Electrica
    ```
    (the icon should be named `MISC_instantprofiler.svg` or `.png`)
 
-3. Restart Houdini, or run in the Python Shell:
-   ```python
-   hou.ui.reloadMainMenubar()
-   ```
+3. Create a new shelf tool in Houdini:
+   - Right-click any shelf → **New Tool...**
+   - Name: `InstantProfiler`
+   - Icon: `MISC_instantprofiler`
+   - In the **Script** tab, paste:
+     ```python
+     exec(open(hou.expandString("$HOUDINI_USER_PREF_DIR/scripts/InstantProfiler.py")).read())
+     ```
+   - Save
 
 4. The **InstantProfiler** tool will appear in your shelf.
 
