@@ -8,12 +8,8 @@
 !README.md
 !.gitignore
 
-!toolbar/
-!toolbar/ACsTools.shelf
-
 !Icons/
 !Icons/InstantProfiler.png
 
-# Optional: source copy of the script for readability on GitHub
 !src/
 !src/InstantProfiler.py
