@@ -44,6 +44,8 @@ Repo: [github.com/Electricavisuals/InstantProfiler](https://github.com/Electrica
 
 4. The **InstantProfiler** tool will appear in your shelf.
 
+![InstantProfiler screenshot](screenshots/screenshot_001.png)
+
 ## Usage
 
 1. Select one or more nodes inside the network you want to profile (the tool profiles all direct children of the selected node's parent network).
