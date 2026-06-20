@@ -1,0 +1,19 @@
+# Block everything by default
+*
+
+# Allow directory traversal so git can see into subfolders
+!*/
+
+# Allow only what belongs to the repo
+!README.md
+!.gitignore
+
+!toolbar/
+!toolbar/ACsTools.shelf
+
+!Icons/
+!Icons/InstantProfiler.png
+
+# Optional: source copy of the script for readability on GitHub
+!src/
+!src/InstantProfiler.py
